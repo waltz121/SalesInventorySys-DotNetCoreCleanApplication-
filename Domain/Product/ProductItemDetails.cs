@@ -7,6 +7,7 @@ namespace Domain.Product
 {
     public class ProductItemDetails : ValueObject<ProductItemDetails>
     {
+        public static readonly ProductItemDetails NoneItemDetails = new ProductItemDetails(0, "", "", "");
         public int? Product_Type_Code { get; }
         public string Product_Name { get; }
         public string Product_Description { get; }

@@ -7,7 +7,15 @@ namespace Domain.Sales
 {
     public class Sales: AggregateRoot
     {
-        public DateTime? DateOfSales { get; protected set; }
-        public double? TotalAmountOfSales { get; protected set; }
+        public virtual SalesDetails salesDetails { get; protected set; }
+
+        public Sales()
+        {
+        }
+
+        public virtual void GetSalesDetails(DateTime? dateOfSales, double? TotalAmountOfSales)
+        {
+            salesDetails = new SalesDetails(dateOfSales, TotalAmountOfSales);
+        }
     }
 }

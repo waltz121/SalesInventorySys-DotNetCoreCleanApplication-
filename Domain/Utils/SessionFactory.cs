@@ -23,7 +23,7 @@ namespace Domain.Utils
 
         public static void Init(string connectionString)
         {
-            
+            _factory = BuildSessionFactory(connectionString);
         }
 
         private static ISessionFactory BuildSessionFactory(string connectionString)

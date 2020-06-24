@@ -7,6 +7,7 @@ namespace Domain.Product
 {
     public class ProductInventoryDetails : ValueObject<ProductInventoryDetails>
     {
+        public static readonly ProductInventoryDetails NoneInventoryDetails = new ProductInventoryDetails(0, 0, 0);
         public double Unit_Price { get; }
         public int Reorder_Level { get; }
         public int Reorder_Quantity { get; }
